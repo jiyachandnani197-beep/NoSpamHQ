@@ -1,0 +1,24 @@
+{
+  "passed": 10,
+  "failed": 0,
+  "flaky": 0,
+  "blocked": 0,
+  "test_error": 0,
+  "bugs": [],
+  "action_items": [
+    "Marketing pages emit React duplicate-key console warnings during navigation; no user-flow failure observed."
+  ],
+  "retest_needed": false,
+  "checks": [
+    {"criterion":"Public marketing navigation and homepage","name":"public-marketing-navigation","lane":"browser","status":"passed","evidence":"Homepage loaded; navigation reached Login, Demo, How It Works, Security, Pricing, and Register."},
+    {"criterion":"Unauthenticated demo analysis","name":"demo-analysis-and-threat-tabs","lane":"browser","status":"passed","evidence":"Prefilled email analyzed; result showed risk level, score, indicators, recommendation, and Create a Free Account CTA; Message, URL, and Attachment modes submitted."},
+    {"criterion":"Demo threat-type tabs","name":"demo-analysis-and-threat-tabs","lane":"browser","status":"passed","evidence":"All four demo tabs exposed distinct input experiences and attachment analysis completed safely."},
+    {"criterion":"Registration and session entry","name":"registration-enters-dashboard","lane":"browser","status":"passed","evidence":"Fresh unique account registered with matching password and terms; Security Overview dashboard and session email rendered."},
+    {"criterion":"Authenticated scanner flow","name":"authenticated-scanner-report","lane":"browser","status":"passed","evidence":"Authenticated email scan submitted and completed report rendered with score, indicators, recommendation, and next action."},
+    {"criterion":"Persistent in-session history","name":"scan-history-filters-and-report","lane":"browser","status":"passed","evidence":"Created scan appeared in history; type, risk, and search filters were usable and View report reopened the report."},
+    {"criterion":"Protected navigation and sign out","name":"protected-navigation-and-sign-out","lane":"browser","status":"passed","evidence":"Dashboard, four scanner labels, History, Settings, and Sign Out were present; sign out returned to Login."},
+    {"criterion":"Responsive usability","name":"responsive-navigation-drawers","lane":"browser","status":"passed","evidence":"390px viewport opened public hamburger navigation and authenticated sidebar drawer; primary dashboard link remained usable."},
+    {"criterion":"Demo analysis API and threat-type validation","name":"test_tscheck_demo.py","lane":"backend","status":"passed","evidence":"HTTP assertions: POST /api/demo/analyze returned 200 for email, message, URL, and attachment with structured scan responses."},
+    {"criterion":"Registration, authenticated scans, history, and logout API","name":"test_tscheck_auth_scans.py","lane":"backend","status":"passed","evidence":"HTTP assertions: register/me/scans/list/get/logout succeeded; anonymous POST /api/scans returned 401. 5 tests passed."}
+  ]
+}
