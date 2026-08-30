@@ -24,3 +24,5 @@ Light public site, dark navy workspace shell, restrained navy/blue/teal palette,
 
 ## Recent UI update
 Risk statuses are plain text indicators with icons rather than pill badges. Authenticated Dashboard and scanner routes include a floating Google & Gmail connection tab with a clearly labeled Coming soon state; it is visual-only and has no OAuth or Gmail integration.
+
+Settings now also includes a dedicated Gmail integration placeholder showing disconnected status, future capability context, privacy guidance, and a disabled Connect Gmail action marked Coming soon. This flow is visual-only.
